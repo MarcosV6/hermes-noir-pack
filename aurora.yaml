@@ -1,220 +1,234 @@
 # ═══════════════════════════════════════════════════════════════
 #  AURORA — The Command Center
-#  "Where data streams meet the edge of space"
+#  "Frosted glass meets deep space"
 # ═══════════════════════════════════════════════════════════════
 
 name: aurora
 label: Aurora
-description: "Deep indigo command center — electric cyan data streams, amber alerts, cockpit layout with animated grid overlay and corner brackets"
+description: "Deep indigo command center with frosted glass panels, cyan data streams, and premium OS-level polish"
 
 # ── PALETTE ───────────────────────────────────────────────────
 palette:
   background:
-    hex: '#020510'
+    hex: '#010409'
     alpha: 1.0
   midground:
-    hex: '#00f0ff'
+    hex: '#00d4ff'
     alpha: 1.0
   foreground:
     hex: '#ffffff'
     alpha: 0.0
-  warmGlow: rgba(0, 240, 255, 0.25)
-  noiseOpacity: 0.15
+  warmGlow: rgba(0, 212, 255, 0.2)
+  noiseOpacity: 0.1
 
 # ── TYPOGRAPHY ───────────────────────────────────────────────
 typography:
-  fontSans: '"Space Grotesk", "Inter", system-ui, sans-serif'
-  fontMono: '"JetBrains Mono", "SF Mono", ui-monospace, monospace'
-  fontDisplay: '"Orbitron", "Space Grotesk", sans-serif'
-  fontUrl: https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap
+  fontSans: '"SF Pro Display", "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif'
+  fontMono: '"SF Mono", "JetBrains Mono", ui-monospace, monospace'
+  fontDisplay: '"SF Pro Display", "Inter", system-ui, sans-serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap
   baseSize: 14px
-  lineHeight: '1.5'
-  letterSpacing: 0.03em
+  lineHeight: '1.45'
+  letterSpacing: -0.01em
 
 # ── LAYOUT ───────────────────────────────────────────────────
 layout:
-  radius: 0px
-  density: compact
+  radius: 16px
+  density: comfortable
 layoutVariant: cockpit
 
 # ── ASSETS ───────────────────────────────────────────────────
 assets:
-  bg: 'linear-gradient(160deg, #020510 0%, #0a1628 30%, #0d1f3c 60%, #0a1628 100%)'
-  hero: radial-gradient(ellipse 70% 40% at 50% 10%, rgba(0, 240, 255, 0.12) 0%, transparent 70%)
+  bg: 'linear-gradient(180deg, #010409 0%, #020a14 40%, #010409 100%)'
+  hero: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 212, 255, 0.08) 0%, transparent 60%)
 
 # ── COMPONENT STYLES ────────────────────────────────────────
 componentStyles:
   card:
-    background: 'linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(5, 10, 20, 0.98) 100%)'
-    border: '1px solid rgba(0, 240, 255, 0.15)'
-    box-shadow: '0 0 30px rgba(0, 240, 255, 0.06), inset 0 1px 0 rgba(0, 240, 255, 0.1)'
-    backdrop-filter: 'blur(20px)'
+    background: 'linear-gradient(135deg, rgba(30, 40, 60, 0.6) 0%, rgba(10, 15, 25, 0.7) 100%)'
+    border: '1px solid rgba(0, 212, 255, 0.15)'
+    box-shadow:
+      '0 8px 32px rgba(0, 0, 0, 0.4),
+       0 2px 8px rgba(0, 0, 0, 0.2),
+       inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+    backdrop-filter: 'blur(24px) saturate(1.4)'
   header:
-    background: 'linear-gradient(180deg, rgba(5, 10, 20, 0.98) 0%, rgba(5, 10, 20, 0.85) 100%)'
-    border-bottom: '1px solid rgba(0, 240, 255, 0.2)'
-    backdrop-filter: 'blur(20px)'
-    box-shadow: '0 2px 40px rgba(0, 240, 255, 0.08)'
+    background: 'linear-gradient(180deg, rgba(10, 15, 25, 0.85) 0%, rgba(10, 15, 25, 0.75) 100%)'
+    border-bottom: '1px solid rgba(0, 212, 255, 0.12)'
+    backdrop-filter: 'blur(30px) saturate(1.5)'
+    box-shadow: '0 4px 24px rgba(0, 0, 0, 0.3)'
   badge:
-    background: 'rgba(0, 240, 255, 0.1)'
-    border: '1px solid rgba(0, 240, 255, 0.3)'
-    color: '#00f0ff'
+    background: 'rgba(0, 212, 255, 0.12)'
+    border: '1px solid rgba(0, 212, 255, 0.25)'
+    color: '#00d4ff'
   tab:
     background: 'transparent'
     border-bottom: '2px solid transparent'
   progress:
-    background: 'rgba(0, 240, 255, 0.1)'
+    background: 'rgba(0, 212, 255, 0.1)'
   backdrop:
-    background: 'rgba(2, 5, 16, 0.85)'
+    background: 'rgba(1, 4, 9, 0.85)'
   page:
     background: 'transparent'
 
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
-  card: 'rgba(10, 22, 40, 0.95)'
+  card: 'rgba(15, 20, 30, 0.85)'
   cardForeground: '#e8f4ff'
-  primary: '#00f0ff'
-  primaryForeground: '#020510'
-  secondary: 'rgba(0, 240, 255, 0.1)'
-  secondaryForeground: '#00f0ff'
-  muted: 'rgba(10, 22, 40, 0.8)'
-  mutedForeground: 'rgba(0, 240, 255, 0.5)'
-  accent: '#00f0ff'
-  accentForeground: '#020510'
-  destructive: '#ff3a5c'
+  primary: '#00d4ff'
+  primaryForeground: '#010409'
+  secondary: 'rgba(0, 212, 255, 0.12)'
+  secondaryForeground: '#00d4ff'
+  muted: 'rgba(15, 20, 30, 0.7)'
+  mutedForeground: 'rgba(0, 212, 255, 0.5)'
+  accent: '#00d4ff'
+  accentForeground: '#010409'
+  destructive: '#ff3b5c'
   destructiveForeground: '#ffffff'
-  success: '#00ff88'
-  warning: '#ffb800'
-  border: 'rgba(0, 240, 255, 0.12)'
-  input: 'rgba(0, 240, 255, 0.08)'
-  ring: '#00f0ff'
+  success: '#00e676'
+  warning: '#ffc107'
+  border: 'rgba(0, 212, 255, 0.1)'
+  input: 'rgba(0, 212, 255, 0.06)'
+  ring: '#00d4ff'
 
 # ── CUSTOM CSS ──────────────────────────────────────────────
 customCSS: |
-  /* ── Animated Grid Overlay ── */
+  /* ── Animated Grid with Depth ── */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    animation: gridShift 20s linear infinite;
+      linear-gradient(rgba(0, 212, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+    animation: gridFloat 25s linear infinite;
     pointer-events: none;
     z-index: 0;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
   }
 
-  @keyframes gridShift {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(60px, 60px); }
+  @keyframes gridFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-32px, -32px) scale(1.02); }
+    100% { transform: translate(0, 0) scale(1); }
   }
 
-  /* ── Cyan Glow Pulse on Cards ── */
+  /* ── Glass Card with Refinement ── */
   [data-component="card"], .card, [role="listitem"] {
     position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
   }
 
-  [data-component="card"]:hover, .card:hover {
-    border-color: rgba(0, 240, 255, 0.4) !important;
-    box-shadow:
-      0 0 40px rgba(0, 240, 255, 0.12),
-      0 0 80px rgba(0, 240, 255, 0.04),
-      inset 0 1px 0 rgba(0, 240, 255, 0.2) !important;
-    transform: translateY(-1px);
-  }
-
-  /* ── Corner Brackets on Cards ── */
+  /* ── Inner Glow Border Effect ── */
   [data-component="card"]::before,
-  [data-component="card"]::after {
+  .card::before {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
-    border-color: rgba(0, 240, 255, 0.4);
-    border-style: solid;
-    transition: all 0.3s ease;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), transparent 50%, rgba(0, 212, 255, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
   }
 
-  [data-component="card"]::before {
-    top: -1px;
-    left: -1px;
-    border-width: 2px 0 0 2px;
-  }
-
-  [data-component="card"]::after {
-    top: -1px;
-    right: -1px;
-    border-width: 2px 2px 0 0;
+  [data-component="card"]:hover,
+  .card:hover {
+    border-color: rgba(0, 212, 255, 0.25) !important;
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.3),
+      0 0 60px rgba(0, 212, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+    transform: translateY(-3px) scale(1.005);
   }
 
   [data-component="card"]:hover::before,
-  [data-component="card"]:hover::after {
-    width: 20px;
-    height: 20px;
-    border-color: #00f0ff;
+  .card:hover::before {
+    opacity: 1;
   }
 
-  /* ── Status Badges Glow ── */
-  .badge, [data-component="badge"] {
-    animation: badgePulse 3s ease-in-out infinite;
-  }
-
-  @keyframes badgePulse {
-    0%, 100% { box-shadow: 0 0 8px rgba(0, 240, 255, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
-  }
-
-  /* ── Cyan Text Gradient for Headings ── */
+  /* ── Cyan Gradient Headings ── */
   h1, h2, h3, h4, [class*="heading"] {
-    background: linear-gradient(135deg, #ffffff 0%, #00f0ff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
-  /* ── Custom Scrollbar ── */
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: rgba(2, 5, 16, 0.8); }
+  /* ── Glass Badge ── */
+  .badge, [data-component="badge"] {
+    backdrop-filter: 'blur(12px)';
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .badge:hover, [data-component="badge"]:hover {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  /* ── Refined Scrollbar ── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00f0ff, #0088aa);
-    border-radius: 3px;
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.3), rgba(0, 212, 255, 0.1));
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.5), rgba(0, 212, 255, 0.2));
+    background-clip: content-box;
   }
 
-  /* ── Selection Color ── */
+  /* ── Selection ── */
   ::selection {
-    background: rgba(0, 240, 255, 0.3);
+    background: rgba(0, 212, 255, 0.25);
     color: #ffffff;
   }
 
-  /* ── Nav Link Hover Effect ── */
+  /* ── Nav Link Hover ── */
   nav a:hover, [role="navigation"] a:hover {
-    color: #00f0ff !important;
-    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+    color: #00d4ff !important;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
   }
 
-  /* ── Button Glow ── */
+  /* ── Glass Button ── */
+  button {
+    backdrop-filter: 'blur(16px)';
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
   button:hover {
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15) !important;
-    border-color: rgba(0, 240, 255, 0.4) !important;
+    box-shadow: 0 0 24px rgba(0, 212, 255, 0.15) !important;
+    border-color: rgba(0, 212, 255, 0.35) !important;
+    transform: translateY(-2px);
   }
 
   /* ── Ambient Glow Orbs ── */
   body::after {
     content: '';
     position: fixed;
-    top: -50%;
-    right: -30%;
-    width: 80vw;
-    height: 80vw;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.04) 0%, transparent 70%);
+    top: -20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
-    animation: orbFloat 15s ease-in-out infinite;
+    animation: orbFloat 18s ease-in-out infinite;
   }
 
   @keyframes orbFloat {
     0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(-5%, 5%) scale(1.05); }
-    66% { transform: translate(3%, -3%) scale(0.95); }
+    33% { transform: translate(-8%, 8%) scale(1.08); }
+    66% { transform: translate(5%, -5%) scale(0.92); }
   }
