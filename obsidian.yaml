@@ -16,7 +16,7 @@ palette:
     hex: '#5b6abf'
     alpha: 1.0
   foreground:
-    hex: '#1a1a2e'
+    hex: '#0a0a0a'
     alpha: 1.0
   warmGlow: rgba(91, 106, 191, 0.08)
   noiseOpacity: 0.05
@@ -56,7 +56,7 @@ componentStyles:
   badge:
     background: 'rgba(91, 106, 191, 0.1)'
     border: '1px solid rgba(91, 106, 191, 0.2)'
-    color: '#5b6abf'
+    color: '#4b5563'
   tab:
     background: 'transparent'
     border-bottom: '2px solid transparent'
@@ -70,13 +70,13 @@ componentStyles:
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
   card: 'rgba(255, 255, 255, 0.8)'
-  cardForeground: '#1a1a2e'
+  cardForeground: '#0a0a0a'
   primary: '#5b6abf'
   primaryForeground: '#ffffff'
   secondary: 'rgba(91, 106, 191, 0.1)'
-  secondaryForeground: '#5b6abf'
+  secondaryForeground: '#4b5563'
   muted: 'rgba(240, 240, 245, 0.8)'
-  mutedForeground: '#6b7280'
+  mutedForeground: '#4b5563'
   accent: '#5b6abf'
   accentForeground: '#ffffff'
   destructive: '#ff3b5c'
@@ -138,9 +138,9 @@ customCSS: |
     opacity: 1;
   }
 
-  /* ── Headings with Dark Text ── */
+  /* ── Headings with High Contrast ── */
   h1, h2, h3, h4, [class*="heading"] {
-    color: #1a1a2e !important;
+    color: #0a0a0a !important;
     font-weight: 600;
     letter-spacing: -0.02em;
   }
@@ -149,6 +149,7 @@ customCSS: |
   .badge, [data-component="badge"] {
     backdrop-filter: 'blur(12px)';
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #4b5563 !important;
   }
 
   .badge:hover, [data-component="badge"]:hover {
@@ -173,7 +174,7 @@ customCSS: |
   /* ── Selection ── */
   ::selection {
     background: rgba(91, 106, 191, 0.2);
-    color: #1a1a2e;
+    color: #0a0a0a;
   }
 
   /* ── Nav Link Hover ── */
@@ -195,13 +196,13 @@ customCSS: |
   }
 
   /* ── Body Text Readability ── */
-  body, p, span, div, li, td, th {
-    color: #1a1a2e !important;
+  body, p, span, div, li, td, th, a, label, input, textarea {
+    color: #0a0a0a !important;
   }
 
   /* ── Muted Text ── */
-  .text-muted, .muted, [class*="muted"] {
-    color: #6b7280 !important;
+  .text-muted, .muted, [class*="muted"], [class*="secondary"] {
+    color: #4b5563 !important;
   }
 
   /* ── Ambient Purple Glow ── */
