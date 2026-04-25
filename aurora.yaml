@@ -1,5 +1,5 @@
 # ═══════════════════════════════════════════════════════════════
-#  AURORA — The Command Center Theme
+#  AURORA — The Command Center
 #  "Where data streams meet the edge of space"
 # ═══════════════════════════════════════════════════════════════
 
@@ -10,16 +10,16 @@ description: "Deep indigo command center — electric cyan data streams, amber a
 # ── PALETTE ───────────────────────────────────────────────────
 palette:
   background:
-    hex: '#050810'
+    hex: '#020510'
     alpha: 1.0
   midground:
-    hex: '#3fd3ff'
+    hex: '#00f0ff'
     alpha: 1.0
   foreground:
     hex: '#ffffff'
-    alpha: 0
-  warmGlow: rgba(63, 211, 255, 0.18)
-  noiseOpacity: 0.4
+    alpha: 0.0
+  warmGlow: rgba(0, 240, 255, 0.25)
+  noiseOpacity: 0.15
 
 # ── TYPOGRAPHY ───────────────────────────────────────────────
 typography:
@@ -29,229 +29,192 @@ typography:
   fontUrl: https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap
   baseSize: 14px
   lineHeight: '1.5'
-  letterSpacing: 0.02em
+  letterSpacing: 0.03em
 
 # ── LAYOUT ───────────────────────────────────────────────────
 layout:
-  radius: 4px
+  radius: 0px
   density: compact
 layoutVariant: cockpit
 
 # ── ASSETS ───────────────────────────────────────────────────
 assets:
-  bg: 'linear-gradient(160deg, #050810 0%, #0a1628 30%, #0d1f3c 60%, #0a1628 100%)'
-  hero: radial-gradient(ellipse 70% 40% at 50% 10%, rgba(63, 211, 255, 0.08) 0%, transparent 70%)
-  crest: ''
+  bg: 'linear-gradient(160deg, #020510 0%, #0a1628 30%, #0d1f3c 60%, #0a1628 100%)'
+  hero: radial-gradient(ellipse 70% 40% at 50% 10%, rgba(0, 240, 255, 0.12) 0%, transparent 70%)
 
 # ── COMPONENT STYLES ────────────────────────────────────────
 componentStyles:
   card:
-    clipPath: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)
-    background: linear-gradient(180deg, rgba(10, 22, 40, 0.92) 0%, rgba(5, 8, 16, 0.95) 100%)
-    boxShadow: '0 0 0 1px rgba(63, 211, 255, 0.15), 0 4px 24px -8px rgba(63, 211, 255, 0.2)'
-    border: 1px solid rgba(63, 211, 255, 0.1)
+    background: 'linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(5, 10, 20, 0.98) 100%)'
+    border: '1px solid rgba(0, 240, 255, 0.15)'
+    box-shadow: '0 0 30px rgba(0, 240, 255, 0.06), inset 0 1px 0 rgba(0, 240, 255, 0.1)'
+    backdrop-filter: 'blur(20px)'
   header:
-    background: linear-gradient(180deg, rgba(10, 22, 40, 0.97) 0%, rgba(5, 8, 16, 0.93) 100%)
-    borderBottom: 1px solid rgba(63, 211, 255, 0.2)
-  sidebar:
-    background: linear-gradient(180deg, rgba(8, 18, 35, 0.95) 0%, rgba(5, 8, 16, 0.9) 100%)
-  tab:
-    clipPath: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%)
+    background: 'linear-gradient(180deg, rgba(5, 10, 20, 0.98) 0%, rgba(5, 10, 20, 0.85) 100%)'
+    border-bottom: '1px solid rgba(0, 240, 255, 0.2)'
+    backdrop-filter: 'blur(20px)'
+    box-shadow: '0 2px 40px rgba(0, 240, 255, 0.08)'
   badge:
-    textTransform: uppercase
-    letterSpacing: 0.12em
-    fontSize: 0.65rem
-    fontWeight: 700
-    borderRadius: 2px
+    background: 'rgba(0, 240, 255, 0.1)'
+    border: '1px solid rgba(0, 240, 255, 0.3)'
+    color: '#00f0ff'
+  tab:
+    background: 'transparent'
+    border-bottom: '2px solid transparent'
+  progress:
+    background: 'rgba(0, 240, 255, 0.1)'
   backdrop:
-    fillerOpacity: 1
-    fillerBlendMode: normal
+    background: 'rgba(2, 5, 16, 0.85)'
+  page:
+    background: 'transparent'
 
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
-  primary: '#3fd3ff'
-  primaryForeground: '#050810'
-  accent: '#ffce3a'
-  accentForeground: '#050810'
-  ring: '#3fd3ff'
-  success: '#22c55e'
-  warning: '#ffce3a'
-  destructive: '#ef4444'
-  border: rgba(63, 211, 255, 0.12)
-  card: rgba(10, 22, 40, 0.88)
-  cardForeground: '#e0f0ff'
-  muted: rgba(10, 22, 40, 0.6)
-  mutedForeground: '#7ab8e0'
+  card: 'rgba(10, 22, 40, 0.95)'
+  cardForeground: '#e8f4ff'
+  primary: '#00f0ff'
+  primaryForeground: '#020510'
+  secondary: 'rgba(0, 240, 255, 0.1)'
+  secondaryForeground: '#00f0ff'
+  muted: 'rgba(10, 22, 40, 0.8)'
+  mutedForeground: 'rgba(0, 240, 255, 0.5)'
+  accent: '#00f0ff'
+  accentForeground: '#020510'
+  destructive: '#ff3a5c'
+  destructiveForeground: '#ffffff'
+  success: '#00ff88'
+  warning: '#ffb800'
+  border: 'rgba(0, 240, 255, 0.12)'
+  input: 'rgba(0, 240, 255, 0.08)'
+  ring: '#00f0ff'
 
 # ── CUSTOM CSS ──────────────────────────────────────────────
 customCSS: |
-  /* ═══════════════════════════════════════════════════════
-     AURORA — Advanced CSS Effects
-     ═══════════════════════════════════════════════════════ */
-
-  /* Animated grid overlay — breathing tech texture */
-  :root[data-layout-variant="cockpit"] body::before {
-    content: "";
+  /* ── Animated Grid Overlay ── */
+  body::before {
+    content: '';
     position: fixed;
     inset: 0;
-    pointer-events: none;
-    z-index: -1;
     background-image:
-      linear-gradient(rgba(63, 211, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(63, 211, 255, 0.03) 1px, transparent 1px);
-    background-size: 64px 64px;
-    animation: auroraGrid 8s ease-in-out infinite;
-  }
-
-  @keyframes auroraGrid {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.8; }
-  }
-
-  /* Radial ambient glow — pulsing */
-  :root[data-layout-variant="cockpit"] body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
+      linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridShift 20s linear infinite;
     pointer-events: none;
-    z-index: -1;
-    background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(63, 211, 255, 0.06) 0%, transparent 70%);
-    animation: auroraGlow 6s ease-in-out infinite;
+    z-index: 0;
   }
 
-  @keyframes auroraGlow {
-    0%, 100% { opacity: 0.6; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.05); }
+  @keyframes gridShift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(60px, 60px); }
   }
 
-  /* Corner brackets on cards — precise and glowing */
-  :root[data-layout-variant="cockpit"] [data-slot="card"] {
+  /* ── Cyan Glow Pulse on Cards ── */
+  [data-component="card"], .card, [role="listitem"] {
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  :root[data-layout-variant="cockpit"] [data-slot="card"]::before,
-  :root[data-layout-variant="cockpit"] [data-slot="card"]::after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  [data-component="card"]:hover, .card:hover {
+    border-color: rgba(0, 240, 255, 0.4) !important;
+    box-shadow:
+      0 0 40px rgba(0, 240, 255, 0.12),
+      0 0 80px rgba(0, 240, 255, 0.04),
+      inset 0 1px 0 rgba(0, 240, 255, 0.2) !important;
+    transform: translateY(-1px);
   }
 
-  /* Top-left bracket */
-  :root[data-layout-variant="cockpit"] [data-slot="card"]::before {
+  /* ── Corner Brackets on Cards ── */
+  [data-component="card"]::before,
+  [data-component="card"]::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: rgba(0, 240, 255, 0.4);
+    border-style: solid;
+    transition: all 0.3s ease;
+  }
+
+  [data-component="card"]::before {
     top: -1px;
     left: -1px;
-    border-top: 2px solid rgba(63, 211, 255, 0.3);
-    border-left: 2px solid rgba(63, 211, 255, 0.3);
+    border-width: 2px 0 0 2px;
   }
 
-  /* Bottom-right bracket */
-  :root[data-layout-variant="cockpit"] [data-slot="card"]::after {
-    bottom: -1px;
+  [data-component="card"]::after {
+    top: -1px;
     right: -1px;
-    border-bottom: 2px solid rgba(63, 211, 255, 0.3);
-    border-right: 2px solid rgba(63, 211, 255, 0.3);
+    border-width: 2px 2px 0 0;
   }
 
-  /* Hover state — brackets glow brighter */
-  :root[data-layout-variant="cockpit"] [data-slot="card"]:hover::before,
-  :root[data-layout-variant="cockpit"] [data-slot="card"]:hover::after {
-    border-color: rgba(63, 211, 255, 0.7);
-    box-shadow: 0 0 12px rgba(63, 211, 255, 0.3);
+  [data-component="card"]:hover::before,
+  [data-component="card"]:hover::after {
+    width: 20px;
+    height: 20px;
+    border-color: #00f0ff;
   }
 
-  /* Header glow effect */
-  :root[data-layout-variant="cockpit"] header {
-    box-shadow: 0 2px 30px -8px rgba(63, 211, 255, 0.15);
+  /* ── Status Badges Glow ── */
+  .badge, [data-component="badge"] {
+    animation: badgePulse 3s ease-in-out infinite;
   }
 
-  /* Tab indicator — glowing underline with gradient */
-  :root[data-layout-variant="cockpit"] [data-slot="tab-list"] {
-    position: relative;
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(0, 240, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
   }
 
-  :root[data-layout-variant="cockpit"] [data-slot="tab-list"]::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(63, 211, 255, 0.4) 20%,
-      rgba(63, 211, 255, 0.6) 50%,
-      rgba(63, 211, 255, 0.4) 80%,
-      transparent 100%
-    );
-    animation: auroraTabPulse 3s ease-in-out infinite;
+  /* ── Cyan Text Gradient for Headings ── */
+  h1, h2, h3, h4, [class*="heading"] {
+    background: linear-gradient(135deg, #ffffff 0%, #00f0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  @keyframes auroraTabPulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
-  }
-
-  /* Button hover — cyan glow */
-  :root[data-layout-variant="cockpit"] button:hover {
-    box-shadow: 0 0 20px rgba(63, 211, 255, 0.3);
-    transition: box-shadow 0.2s ease;
-  }
-
-  /* Subtle scanline effect */
-  :root[data-layout-variant="cockpit"] body {
-    background-image:
-      repeating-linear-gradient(
-        to bottom,
-        transparent 0px,
-        transparent 2px,
-        rgba(63, 211, 255, 0.008) 2px,
-        rgba(63, 211, 255, 0.008) 4px
-      );
-  }
-
-  /* Custom scrollbar styling */
-  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-track {
-    background: rgba(5, 8, 16, 0.5);
-  }
-
-  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-thumb {
-    background: rgba(63, 211, 255, 0.3);
+  /* ── Custom Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: rgba(2, 5, 16, 0.8); }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f0ff, #0088aa);
     border-radius: 3px;
   }
 
-  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-thumb:hover {
-    background: rgba(63, 211, 255, 0.5);
+  /* ── Selection Color ── */
+  ::selection {
+    background: rgba(0, 240, 255, 0.3);
+    color: #ffffff;
   }
 
-  /* Data stream animation on primary elements */
-  :root[data-layout-variant="cockpit"] .text-primary {
-    position: relative;
+  /* ── Nav Link Hover Effect ── */
+  nav a:hover, [role="navigation"] a:hover {
+    color: #00f0ff !important;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
   }
 
-  :root[data-layout-variant="cockpit"] .text-primary::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg,
-      transparent,
-      rgba(63, 211, 255, 0.6),
-      transparent
-    );
-    animation: auroraStream 2s linear infinite;
+  /* ── Button Glow ── */
+  button:hover {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.15) !important;
+    border-color: rgba(0, 240, 255, 0.4) !important;
   }
 
-  @keyframes auroraStream {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+  /* ── Ambient Glow Orbs ── */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -50%;
+    right: -30%;
+    width: 80vw;
+    height: 80vw;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: orbFloat 15s ease-in-out infinite;
+  }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-5%, 5%) scale(1.05); }
+    66% { transform: translate(3%, -3%) scale(0.95); }
   }

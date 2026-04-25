@@ -1,6 +1,6 @@
 # ═══════════════════════════════════════════════════════════════
 #  OBSIDIAN — The Luxury Theme
-#  "Volcanic glass meets molten gold"
+#  "Pure volcanic black meets molten gold"
 # ═══════════════════════════════════════════════════════════════
 
 name: obsidian
@@ -10,23 +10,23 @@ description: "Pure volcanic black with warm amber/gold accents — premium, luxu
 # ── PALETTE ───────────────────────────────────────────────────
 palette:
   background:
-    hex: '#030303'
+    hex: '#010101'
     alpha: 1.0
   midground:
-    hex: '#d4a853'
+    hex: '#c9a04a'
     alpha: 1.0
   foreground:
     hex: '#ffffff'
-    alpha: 0
-  warmGlow: rgba(212, 168, 83, 0.12)
-  noiseOpacity: 0.25
+    alpha: 0.0
+  warmGlow: rgba(201, 160, 74, 0.18)
+  noiseOpacity: 0.08
 
 # ── TYPOGRAPHY ───────────────────────────────────────────────
 typography:
   fontSans: '"DM Sans", "Inter", system-ui, sans-serif'
-  fontMono: '"Space Mono", "JetBrains Mono", ui-monospace, monospace'
-  fontDisplay: '"Playfair Display", "DM Sans", serif'
-  fontUrl: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap
+  fontMono: '"JetBrains Mono", "SF Mono", ui-monospace, monospace'
+  fontDisplay: '"Playfair Display", "Georgia", serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap
   baseSize: 15px
   lineHeight: '1.6'
   letterSpacing: 0.01em
@@ -35,193 +35,170 @@ typography:
 layout:
   radius: 12px
   density: comfortable
-layoutVariant: default
 
 # ── ASSETS ───────────────────────────────────────────────────
 assets:
-  bg: 'linear-gradient(180deg, #030303 0%, #0a0a0a 50%, #060606 100%)'
-  hero: radial-gradient(ellipse 50% 30% at 50% 20%, rgba(212, 168, 83, 0.06) 0%, transparent 70%)
-  crest: ''
+  bg: 'linear-gradient(180deg, #010101 0%, #080604 50%, #010101 100%)'
+  hero: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(201, 160, 74, 0.08) 0%, transparent 60%)
 
 # ── COMPONENT STYLES ────────────────────────────────────────
 componentStyles:
   card:
-    clipPath: none
-    background: linear-gradient(180deg, rgba(15, 15, 15, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%)
-    boxShadow: '0 2px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 168, 83, 0.08)'
-    border: 1px solid rgba(212, 168, 83, 0.06)
+    background: 'linear-gradient(145deg, rgba(15, 13, 10, 0.95) 0%, rgba(5, 4, 3, 0.98) 100%)'
+    border: '1px solid rgba(201, 160, 74, 0.1)'
+    box-shadow: '0 4px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(201, 160, 74, 0.05)'
+    backdrop-filter: 'blur(20px)'
   header:
-    background: linear-gradient(180deg, rgba(12, 12, 12, 0.98) 0%, rgba(6, 6, 6, 0.95) 100%)
-    borderBottom: 1px solid rgba(212, 168, 83, 0.1)
-  sidebar:
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.92) 100%)
-  tab:
-    clipPath: none
+    background: 'linear-gradient(180deg, rgba(1, 1, 1, 0.98) 0%, rgba(8, 6, 4, 0.9) 100%)'
+    border-bottom: '1px solid rgba(201, 160, 74, 0.15)'
+    backdrop-filter: 'blur(20px)'
+    box-shadow: '0 4px 30px rgba(0, 0, 0, 0.3)'
   badge:
-    textTransform: none
-    letterSpacing: 0.04em
-    fontSize: 0.7rem
-    fontWeight: 500
-    borderRadius: 20px
+    background: 'rgba(201, 160, 74, 0.12)'
+    border: '1px solid rgba(201, 160, 74, 0.25)'
+    color: '#c9a04a'
+  tab:
+    background: 'transparent'
+    border-bottom: '2px solid transparent'
+  progress:
+    background: 'rgba(201, 160, 74, 0.1)'
   backdrop:
-    fillerOpacity: 0.8
-    fillerBlendMode: multiply
+    background: 'rgba(1, 1, 1, 0.9)'
+  page:
+    background: 'transparent'
 
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
-  primary: '#d4a853'
-  primaryForeground: '#030303'
-  accent: '#e8c878'
-  accentForeground: '#030303'
-  ring: '#d4a853'
+  card: 'rgba(15, 13, 10, 0.95)'
+  cardForeground: '#f0e6d3'
+  primary: '#c9a04a'
+  primaryForeground: '#010101'
+  secondary: 'rgba(201, 160, 74, 0.1)'
+  secondaryForeground: '#c9a04a'
+  muted: 'rgba(15, 13, 10, 0.8)'
+  mutedForeground: 'rgba(201, 160, 74, 0.45)'
+  accent: '#c9a04a'
+  accentForeground: '#010101'
+  destructive: '#ff4444'
+  destructiveForeground: '#ffffff'
   success: '#4ade80'
   warning: '#fbbf24'
-  destructive: '#f87171'
-  border: rgba(212, 168, 83, 0.08)
-  card: rgba(12, 12, 12, 0.9)
-  cardForeground: '#f0e8d8'
-  muted: rgba(15, 15, 15, 0.7)
-  mutedForeground: '#8a7a5a'
+  border: 'rgba(201, 160, 74, 0.08)'
+  input: 'rgba(201, 160, 74, 0.06)'
+  ring: '#c9a04a'
 
 # ── CUSTOM CSS ──────────────────────────────────────────────
 customCSS: |
-  /* ═══════════════════════════════════════════════════════
-     OBSIDIAN — Premium Luxury Effects
-     ═══════════════════════════════════════════════════════ */
-
-  /* Subtle gold shimmer on background */
-  :root body::before {
-    content: "";
+  /* ── Gold Shimmer Background ── */
+  body::before {
+    content: '';
     position: fixed;
     inset: 0;
-    pointer-events: none;
-    z-index: -1;
     background:
-      radial-gradient(ellipse 80% 50% at 30% 20%, rgba(212, 168, 83, 0.03) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 40% at 70% 80%, rgba(212, 168, 83, 0.02) 0%, transparent 50%);
-    animation: obsidianShimmer 12s ease-in-out infinite;
+      radial-gradient(ellipse at 20% 50%, rgba(201, 160, 74, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(201, 160, 74, 0.02) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(201, 160, 74, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: shimmerDrift 20s ease-in-out infinite;
   }
 
-  @keyframes obsidianShimmer {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 0.9; }
+  @keyframes shimmerDrift {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
   }
 
-  /* Cards — smooth elevation with gold accent */
-  [data-slot="card"] {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* ── Card Hover with Gold Top Border ── */
+  [data-component="card"], .card, [role="listitem"] {
     position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
   }
 
-  [data-slot="card"]::before {
-    content: "";
+  [data-component="card"]::after,
+  .card::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-      transparent,
-      rgba(212, 168, 83, 0.2),
-      transparent
-    );
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c9a04a, transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
   }
 
-  [data-slot="card"]:hover {
-    transform: translateY(-2px);
+  [data-component="card"]:hover,
+  .card:hover {
+    border-color: rgba(201, 160, 74, 0.25) !important;
     box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.5),
-      0 0 0 1px rgba(212, 168, 83, 0.15);
+      0 8px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(201, 160, 74, 0.15) !important;
+    transform: translateY(-2px);
   }
 
-  [data-slot="card"]:hover::before {
+  [data-component="card"]:hover::after,
+  .card:hover::after {
     opacity: 1;
   }
 
-  /* Header — minimal and clean */
-  header {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  /* ── Gold Gradient Headings ── */
+  h1, h2, h3, h4, [class*="heading"] {
+    background: linear-gradient(135deg, #f0e6d3 0%, #c9a04a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  /* Tab indicators — elegant underline */
-  [data-slot="tab-list"] {
-    position: relative;
+  /* ── Status Badges ── */
+  .badge, [data-component="badge"] {
+    box-shadow: 0 0 12px rgba(201, 160, 74, 0.15);
+    transition: box-shadow 0.3s ease;
   }
 
-  [data-slot="tab-list"]::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: linear-gradient(90deg,
-      transparent,
-      rgba(212, 168, 83, 0.3),
-      transparent
-    );
+  .badge:hover, [data-component="badge"]:hover {
+    box-shadow: 0 0 24px rgba(201, 160, 74, 0.3);
   }
 
-  /* Buttons — smooth gold glow */
+  /* ── Elegant Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9a04a, #8a6a2a);
+    border-radius: 3px;
+    opacity: 0.6;
+  }
+  ::-webkit-scrollbar-thumb:hover { opacity: 1; }
+
+  /* ── Selection ── */
+  ::selection {
+    background: rgba(201, 160, 74, 0.25);
+    color: #f0e6d3;
+  }
+
+  /* ── Nav Links ── */
+  nav a:hover, [role="navigation"] a:hover {
+    color: #c9a04a !important;
+    text-shadow: 0 0 15px rgba(201, 160, 74, 0.3);
+  }
+
+  /* ── Buttons ── */
   button {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
   }
 
   button:hover {
-    box-shadow: 0 0 24px rgba(212, 168, 83, 0.2);
+    box-shadow: 0 0 20px rgba(201, 160, 74, 0.12) !important;
+    border-color: rgba(201, 160, 74, 0.3) !important;
     transform: translateY(-1px);
   }
 
-  button:active {
-    transform: translateY(0);
-  }
-
-  /* Custom scrollbar — minimal and elegant */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(3, 3, 3, 0.3);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgba(212, 168, 83, 0.2);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 168, 83, 0.35);
-  }
-
-  /* Text selection — gold highlight */
-  ::selection {
-    background: rgba(212, 168, 83, 0.3);
-    color: #f0e8d8;
-  }
-
-  /* Primary text — subtle gold tint */
-  .text-primary {
-    position: relative;
-  }
-
-  /* Focus states — gold ring */
-  *:focus-visible {
-    outline: 2px solid rgba(212, 168, 83, 0.5);
-    outline-offset: 2px;
-  }
-
-  /* Badge styling — pill shape */
-  .badge {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-
-  /* Smooth transitions for all interactive elements */
-  a, button, [role="button"], [data-slot="card"] {
-    -webkit-tap-highlight-color: transparent;
+  /* ── Ambient Gold Vignette ── */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(1, 1, 1, 0.4) 100%);
+    pointer-events: none;
+    z-index: 0;
   }

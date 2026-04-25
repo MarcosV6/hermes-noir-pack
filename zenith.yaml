@@ -1,5 +1,5 @@
 # ═══════════════════════════════════════════════════════════════
-#  ZENITH — The Minimalist Theme
+#  ZENITH — The Minimalist
 #  "Space black meets cosmic violet"
 # ═══════════════════════════════════════════════════════════════
 
@@ -10,229 +10,194 @@ description: "Ultra-minimal space black with cosmic violet accents — breathing
 # ── PALETTE ───────────────────────────────────────────────────
 palette:
   background:
-    hex: '#020204'
+    hex: '#040408'
     alpha: 1.0
   midground:
-    hex: '#a78bfa'
+    hex: '#8b5cf6'
     alpha: 1.0
   foreground:
     hex: '#ffffff'
-    alpha: 0
-  warmGlow: rgba(167, 139, 250, 0.1)
-  noiseOpacity: 0.15
+    alpha: 0.0
+  warmGlow: rgba(139, 92, 246, 0.15)
+  noiseOpacity: 0.1
 
 # ── TYPOGRAPHY ───────────────────────────────────────────────
 typography:
-  fontSans: '"Space Grotesk", system-ui, sans-serif'
+  fontSans: '"Space Grotesk", "SF Mono", ui-monospace, monospace'
   fontMono: '"IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace'
-  fontDisplay: '"Space Grotesk", sans-serif'
-  fontUrl: https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap
+  fontDisplay: '"Space Grotesk", system-ui, sans-serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap
   baseSize: 13px
-  lineHeight: '1.55'
-  letterSpacing: 0.03em
+  lineHeight: '1.6'
+  letterSpacing: 0.04em
 
 # ── LAYOUT ───────────────────────────────────────────────────
 layout:
-  radius: 2px
+  radius: 0px
   density: compact
-layoutVariant: default
 
 # ── ASSETS ───────────────────────────────────────────────────
 assets:
-  bg: 'linear-gradient(180deg, #020204 0%, #050508 50%, #020204 100%)'
-  hero: radial-gradient(ellipse 40% 25% at 50% 15%, rgba(167, 139, 250, 0.05) 0%, transparent 70%)
-  crest: ''
+  bg: 'linear-gradient(180deg, #040408 0%, #060610 50%, #040408 100%)'
+  hero: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(139, 92, 246, 0.06) 0%, transparent 60%)
 
 # ── COMPONENT STYLES ────────────────────────────────────────
 componentStyles:
   card:
-    clipPath: none
-    background: linear-gradient(180deg, rgba(8, 8, 12, 0.95) 0%, rgba(4, 4, 6, 0.98) 100%)
-    boxShadow: '0 0 0 1px rgba(167, 139, 250, 0.06)'
-    border: 1px solid rgba(167, 139, 250, 0.04)
+    background: 'rgba(8, 8, 14, 0.95)'
+    border: '1px solid rgba(139, 92, 246, 0.08)'
+    box-shadow: '0 2px 20px rgba(0, 0, 0, 0.3)'
   header:
-    background: linear-gradient(180deg, rgba(6, 6, 10, 0.97) 0%, rgba(3, 3, 5, 0.95) 100%)
-    borderBottom: 1px solid rgba(167, 139, 250, 0.08)
-  sidebar:
-    background: linear-gradient(180deg, rgba(5, 5, 8, 0.95) 0%, rgba(3, 3, 5, 0.92) 100%)
-  tab:
-    clipPath: none
+    background: 'rgba(4, 4, 8, 0.95)'
+    border-bottom: '1px solid rgba(139, 92, 246, 0.12)'
+    backdrop-filter: 'blur(16px)'
   badge:
-    textTransform: uppercase
-    letterSpacing: 0.15em
-    fontSize: 0.6rem
-    fontWeight: 600
-    borderRadius: 1px
+    background: 'rgba(139, 92, 246, 0.08)'
+    border: '1px solid rgba(139, 92, 246, 0.2)'
+    color: '#8b5cf6'
+  tab:
+    background: 'transparent'
+    border-bottom: '1px solid transparent'
+  progress:
+    background: 'rgba(139, 92, 246, 0.08)'
   backdrop:
-    fillerOpacity: 0.9
-    fillerBlendMode: normal
+    background: 'rgba(4, 4, 8, 0.92)'
+  page:
+    background: 'transparent'
 
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
-  primary: '#a78bfa'
-  primaryForeground: '#020204'
-  accent: '#c4b5fd'
-  accentForeground: '#020204'
-  ring: '#a78bfa'
-  success: '#4ade80'
-  warning: '#fbbf24'
-  destructive: '#f87171'
-  border: rgba(167, 139, 250, 0.06)
-  card: rgba(6, 6, 10, 0.9)
-  cardForeground: '#e0d8f0'
-  muted: rgba(8, 8, 12, 0.65)
-  mutedForeground: '#6b5b8a'
+  card: 'rgba(8, 8, 14, 0.95)'
+  cardForeground: '#d4d4dc'
+  primary: '#8b5cf6'
+  primaryForeground: '#040408'
+  secondary: 'rgba(139, 92, 246, 0.08)'
+  secondaryForeground: '#8b5cf6'
+  muted: 'rgba(8, 8, 14, 0.8)'
+  mutedForeground: 'rgba(139, 92, 246, 0.4)'
+  accent: '#8b5cf6'
+  accentForeground: '#040408'
+  destructive: '#ef4444'
+  destructiveForeground: '#ffffff'
+  success: '#22c55e'
+  warning: '#eab308'
+  border: 'rgba(139, 92, 246, 0.06)'
+  input: 'rgba(139, 92, 246, 0.05)'
+  ring: '#8b5cf6'
 
 # ── CUSTOM CSS ──────────────────────────────────────────────
 customCSS: |
-  /* ═══════════════════════════════════════════════════════
-     ZENITH — Cosmic Minimalist Effects
-     ═══════════════════════════════════════════════════════ */
-
-  /* Particle field — subtle floating dots */
-  :root body::before {
-    content: "";
+  /* ── Floating Particle Field ── */
+  body::before {
+    content: '';
     position: fixed;
     inset: 0;
-    pointer-events: none;
-    z-index: -1;
     background-image:
-      radial-gradient(circle 1px at 20% 30%, rgba(167, 139, 250, 0.15) 0%, transparent 100%),
-      radial-gradient(circle 1px at 60% 70%, rgba(167, 139, 250, 0.1) 0%, transparent 100%),
-      radial-gradient(circle 1px at 80% 20%, rgba(167, 139, 250, 0.12) 0%, transparent 100%),
-      radial-gradient(circle 1px at 40% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 100%);
-    background-size: 200px 200px;
-    animation: zenithParticles 20s linear infinite;
-  }
-
-  @keyframes zenithParticles {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-200px); }
-  }
-
-  /* Breathing glow on cards */
-  [data-slot="card"] {
-    position: relative;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  [data-slot="card"]::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    background: linear-gradient(135deg,
-      rgba(167, 139, 250, 0.05),
-      rgba(167, 139, 250, 0.02)
-    );
-    opacity: 0;
-    transition: opacity 0.5s ease;
+      radial-gradient(1px 1px at 10% 20%, rgba(139, 92, 246, 0.3), transparent),
+      radial-gradient(1px 1px at 30% 60%, rgba(139, 92, 246, 0.2), transparent),
+      radial-gradient(1.5px 1.5px at 50% 10%, rgba(139, 92, 246, 0.35), transparent),
+      radial-gradient(1px 1px at 70% 40%, rgba(139, 92, 246, 0.2), transparent),
+      radial-gradient(1px 1px at 90% 70%, rgba(139, 92, 246, 0.25), transparent),
+      radial-gradient(1.5px 1.5px at 15% 85%, rgba(139, 92, 246, 0.3), transparent),
+      radial-gradient(1px 1px at 45% 45%, rgba(139, 92, 246, 0.15), transparent),
+      radial-gradient(1px 1px at 80% 15%, rgba(139, 92, 246, 0.2), transparent),
+      radial-gradient(1.5px 1.5px at 60% 75%, rgba(139, 92, 246, 0.25), transparent),
+      radial-gradient(1px 1px at 25% 35%, rgba(139, 92, 246, 0.15), transparent);
     pointer-events: none;
+    z-index: 0;
+    animation: particlesDrift 30s linear infinite;
   }
 
-  [data-slot="card"]:hover {
-    box-shadow: 0 0 32px rgba(167, 139, 250, 0.1);
-    transform: translateY(-1px);
+  @keyframes particlesDrift {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
   }
 
-  [data-slot="card"]:hover::before {
-    opacity: 1;
-    animation: zenithBreathe 4s ease-in-out infinite;
+  /* ── Subtle Grid ── */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(139, 92, 246, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
   }
 
-  @keyframes zenithBreathe {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.7; }
-  }
-
-  /* Header — ultra-clean */
-  header {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-  }
-
-  /* Tab indicators — minimal line */
-  [data-slot="tab-list"] {
+  /* ── Breathing Card Glow ── */
+  [data-component="card"], .card, [role="listitem"] {
     position: relative;
+    transition: all 0.3s ease;
   }
 
-  [data-slot="tab-list"]::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-    right: 15%;
-    height: 1px;
-    background: linear-gradient(90deg,
-      transparent,
-      rgba(167, 139, 250, 0.25),
-      transparent
-    );
+  [data-component="card"]:hover,
+  .card:hover {
+    border-color: rgba(139, 92, 246, 0.2) !important;
+    box-shadow:
+      0 0 30px rgba(139, 92, 246, 0.08),
+      0 0 60px rgba(139, 92, 246, 0.03) !important;
+    animation: breathe 3s ease-in-out infinite;
   }
 
-  /* Buttons — subtle violet glow */
+  @keyframes breathe {
+    0%, 100% { box-shadow: 0 0 30px rgba(139, 92, 246, 0.08), 0 0 60px rgba(139, 92, 246, 0.03); }
+    50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.15), 0 0 80px rgba(139, 92, 246, 0.06); }
+  }
+
+  /* ── Violet Gradient Headings ── */
+  h1, h2, h3, h4, [class*="heading"] {
+    background: linear-gradient(135deg, #d4d4dc 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Status Badges ── */
+  .badge, [data-component="badge"] {
+    transition: all 0.3s ease;
+  }
+
+  .badge:hover, [data-component="badge"]:hover {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.4);
+  }
+
+  /* ── Invisible Scrollbar ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.4);
+  }
+
+  /* ── Selection ── */
+  ::selection {
+    background: rgba(139, 92, 246, 0.2);
+    color: #d4d4dc;
+  }
+
+  /* ── Nav Links ── */
+  nav a:hover, [role="navigation"] a:hover {
+    color: #8b5cf6 !important;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+  }
+
+  /* ── Buttons ── */
   button {
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
   }
 
   button:hover {
-    box-shadow: 0 0 16px rgba(167, 139, 250, 0.15);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.1) !important;
+    border-color: rgba(139, 92, 246, 0.25) !important;
   }
 
-  /* Custom scrollbar — almost invisible */
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgba(167, 139, 250, 0.15);
-    border-radius: 2px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(167, 139, 250, 0.25);
-  }
-
-  /* Text selection — violet highlight */
-  ::selection {
-    background: rgba(167, 139, 250, 0.25);
-    color: #e0d8f0;
-  }
-
-  /* Focus states — violet ring */
-  *:focus-visible {
-    outline: 1px solid rgba(167, 139, 250, 0.4);
-    outline-offset: 2px;
-  }
-
-  /* Badge styling — sharp and minimal */
-  .badge {
-    border: 1px solid rgba(167, 139, 250, 0.1);
-  }
-
-  /* Primary text — subtle violet accent */
-  .text-primary {
-    position: relative;
-  }
-
-  /* Smooth transitions for all interactive elements */
-  a, button, [role="button"], [data-slot="card"] {
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  /* Subtle grid overlay */
-  :root body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background-image:
-      linear-gradient(rgba(167, 139, 250, 0.015) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(167, 139, 250, 0.015) 1px, transparent 1px);
-    background-size: 128px 128px;
+  /* ── Monospace Everything ── */
+  body, button, input, textarea {
+    font-family: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
   }
