@@ -17,7 +17,7 @@ palette:
     alpha: 1.0
   foreground:
     hex: '#ffffff'
-    alpha: 0.0
+    alpha: 1.0
   warmGlow: rgba(124, 58, 237, 0.15)
   noiseOpacity: 0.08
 
@@ -70,13 +70,13 @@ componentStyles:
 # ── COLOR OVERRIDES ─────────────────────────────────────────
 colorOverrides:
   card: 'rgba(12, 12, 22, 0.8)'
-  cardForeground: '#d4d4dc'
+  cardForeground: '#ffffff'
   primary: '#7c3aed'
   primaryForeground: '#ffffff'
   secondary: 'rgba(124, 58, 237, 0.1)'
   secondaryForeground: '#7c3aed'
   muted: 'rgba(12, 12, 22, 0.7)'
-  mutedForeground: 'rgba(124, 58, 237, 0.5)'
+  mutedForeground: 'rgba(124, 58, 237, 0.7)'
   accent: '#7c3aed'
   accentForeground: '#ffffff'
   destructive: '#ef4444'
@@ -138,6 +138,18 @@ customCSS: |
     position: relative;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
+    animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   /* ── Inner Glow Border ── */
@@ -178,9 +190,14 @@ customCSS: |
     50% { box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.35), 0 0 100px rgba(124, 58, 237, 0.15); }
   }
 
+  /* ── Bright White Text ── */
+  body, p, span, div, li, td, th, a, label, input, textarea, h1, h2, h3, h4 {
+    color: #ffffff !important;
+  }
+
   /* ── Violet Gradient Headings ── */
   h1, h2, h3, h4, [class*="heading"] {
-    background: linear-gradient(135deg, #d4d4dc 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #7c3aed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -188,10 +205,21 @@ customCSS: |
     letter-spacing: -0.01em;
   }
 
+  /* ── Muted Text ── */
+  .text-muted, .muted, [class*="muted"], [class*="secondary"] {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
   /* ── Glass Badge ── */
   .badge, [data-component="badge"] {
     backdrop-filter: 'blur(12px)';
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: badgePulse 4s ease-in-out infinite;
+  }
+
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); }
+    50% { box-shadow: 0 0 20px 2px rgba(124, 58, 237, 0.2); }
   }
 
   .badge:hover, [data-component="badge"]:hover {
@@ -216,7 +244,7 @@ customCSS: |
   /* ── Selection ── */
   ::selection {
     background: rgba(124, 58, 237, 0.2);
-    color: #d4d4dc;
+    color: #ffffff;
   }
 
   /* ── Nav Link Hover ── */
@@ -256,3 +284,11 @@ customCSS: |
     33% { transform: translate(8%, -8%) scale(1.06); }
     66% { transform: translate(-5%, 5%) scale(0.94); }
   }
+
+  /* ── Staggered Card Animations ── */
+  [data-component="card"]:nth-child(1), .card:nth-child(1) { animation-delay: 0.05s; }
+  [data-component="card"]:nth-child(2), .card:nth-child(2) { animation-delay: 0.1s; }
+  [data-component="card"]:nth-child(3), .card:nth-child(3) { animation-delay: 0.15s; }
+  [data-component="card"]:nth-child(4), .card:nth-child(4) { animation-delay: 0.2s; }
+  [data-component="card"]:nth-child(5), .card:nth-child(5) { animation-delay: 0.25s; }
+  [data-component="card"]:nth-child(6), .card:nth-child(6) { animation-delay: 0.3s; }
