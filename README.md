@@ -2,8 +2,6 @@
 
 > **Three premium dashboard themes for Hermes Agent.** Deep space aesthetics, advanced CSS animations, and meticulous attention to detail. Built for the hackathon. Built to win.
 
-![Hermes Noir Pack Preview](./preview.png)
-
 ---
 
 ## ✨ The Collection
@@ -153,15 +151,12 @@ This pack demonstrates mastery of the Hermes dashboard theme system:
 ## 📸 Previews
 
 ### Aurora
-![Aurora Preview](./aurora-preview.png)
 *Command center with animated grid and corner brackets*
 
 ### Obsidian
-![Obsidian Preview](./obsidian-preview.png)
 *Premium luxury with gold accents and smooth curves*
 
 ### Zenith
-![Zenith Preview](./zenith-preview.png)
 *Ultra-minimal with violet particles and breathing effects*
 
 ---
