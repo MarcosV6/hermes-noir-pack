@@ -1,6 +1,6 @@
 # 🌌 Hermes Noir Pack
 
-> **Three premium dashboard themes for Hermes Agent.** Deep space aesthetics, advanced CSS animations, and meticulous attention to detail. Built for the hackathon. Built to win.
+> **Three premium dashboard themes for Hermes Agent.** Deep space aesthetics, advanced CSS animations, and meticulous attention to detail.
 
 ---
 
@@ -131,33 +131,6 @@ Each theme YAML file includes:
 **Total CSS per theme:** 150-250 lines of production-quality styles
 **Animation performance:** All animations use `transform` and `opacity` for GPU acceleration
 **Browser support:** Modern browsers with CSS custom properties and backdrop-filter
-
----
-
-## 🏆 Hackathon Submission
-
-This pack demonstrates mastery of the Hermes dashboard theme system:
-- ✅ All 7 YAML configuration sections used
-- ✅ 3 distinct design languages (command center, luxury, minimalist)
-- ✅ Advanced CSS animations (grid, particles, breathing, shimmer)
-- ✅ Custom typography with Google Fonts integration
-- ✅ Cockpit layout variant implementation
-- ✅ Component-level styling (cards, headers, tabs, badges)
-- ✅ Complete color system overrides
-- ✅ Production-quality README with installation guide
-
----
-
-## 📸 Previews
-
-### Aurora
-*Command center with animated grid and corner brackets*
-
-### Obsidian
-*Premium luxury with gold accents and smooth curves*
-
-### Zenith
-*Ultra-minimal with violet particles and breathing effects*
 
 ---
 
