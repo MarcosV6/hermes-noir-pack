@@ -1,0 +1,227 @@
+# ═══════════════════════════════════════════════════════════════
+#  OBSIDIAN — The Luxury Theme
+#  "Volcanic glass meets molten gold"
+# ═══════════════════════════════════════════════════════════════
+
+name: obsidian
+label: Obsidian
+description: "Pure volcanic black with warm amber/gold accents — premium, luxurious, and effortlessly elegant"
+
+# ── PALETTE ───────────────────────────────────────────────────
+palette:
+  background:
+    hex: '#030303'
+    alpha: 1.0
+  midground:
+    hex: '#d4a853'
+    alpha: 1.0
+  foreground:
+    hex: '#ffffff'
+    alpha: 0
+  warmGlow: rgba(212, 168, 83, 0.12)
+  noiseOpacity: 0.25
+
+# ── TYPOGRAPHY ───────────────────────────────────────────────
+typography:
+  fontSans: '"DM Sans", "Inter", system-ui, sans-serif'
+  fontMono: '"Space Mono", "JetBrains Mono", ui-monospace, monospace'
+  fontDisplay: '"Playfair Display", "DM Sans", serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap
+  baseSize: 15px
+  lineHeight: '1.6'
+  letterSpacing: 0.01em
+
+# ── LAYOUT ───────────────────────────────────────────────────
+layout:
+  radius: 12px
+  density: comfortable
+layoutVariant: default
+
+# ── ASSETS ───────────────────────────────────────────────────
+assets:
+  bg: 'linear-gradient(180deg, #030303 0%, #0a0a0a 50%, #060606 100%)'
+  hero: radial-gradient(ellipse 50% 30% at 50% 20%, rgba(212, 168, 83, 0.06) 0%, transparent 70%)
+  crest: ''
+
+# ── COMPONENT STYLES ────────────────────────────────────────
+componentStyles:
+  card:
+    clipPath: none
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.95) 0%, rgba(8, 8, 8, 0.98) 100%)
+    boxShadow: '0 2px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(212, 168, 83, 0.08)'
+    border: 1px solid rgba(212, 168, 83, 0.06)
+  header:
+    background: linear-gradient(180deg, rgba(12, 12, 12, 0.98) 0%, rgba(6, 6, 6, 0.95) 100%)
+    borderBottom: 1px solid rgba(212, 168, 83, 0.1)
+  sidebar:
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(5, 5, 5, 0.92) 100%)
+  tab:
+    clipPath: none
+  badge:
+    textTransform: none
+    letterSpacing: 0.04em
+    fontSize: 0.7rem
+    fontWeight: 500
+    borderRadius: 20px
+  backdrop:
+    fillerOpacity: 0.8
+    fillerBlendMode: multiply
+
+# ── COLOR OVERRIDES ─────────────────────────────────────────
+colorOverrides:
+  primary: '#d4a853'
+  primaryForeground: '#030303'
+  accent: '#e8c878'
+  accentForeground: '#030303'
+  ring: '#d4a853'
+  success: '#4ade80'
+  warning: '#fbbf24'
+  destructive: '#f87171'
+  border: rgba(212, 168, 83, 0.08)
+  card: rgba(12, 12, 12, 0.9)
+  cardForeground: '#f0e8d8'
+  muted: rgba(15, 15, 15, 0.7)
+  mutedForeground: '#8a7a5a'
+
+# ── CUSTOM CSS ──────────────────────────────────────────────
+customCSS: |
+  /* ═══════════════════════════════════════════════════════
+     OBSIDIAN — Premium Luxury Effects
+     ═══════════════════════════════════════════════════════ */
+
+  /* Subtle gold shimmer on background */
+  :root body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 80% 50% at 30% 20%, rgba(212, 168, 83, 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 70% 80%, rgba(212, 168, 83, 0.02) 0%, transparent 50%);
+    animation: obsidianShimmer 12s ease-in-out infinite;
+  }
+
+  @keyframes obsidianShimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.9; }
+  }
+
+  /* Cards — smooth elevation with gold accent */
+  [data-slot="card"] {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  [data-slot="card"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(212, 168, 83, 0.2),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  [data-slot="card"]:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(212, 168, 83, 0.15);
+  }
+
+  [data-slot="card"]:hover::before {
+    opacity: 1;
+  }
+
+  /* Header — minimal and clean */
+  header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Tab indicators — elegant underline */
+  [data-slot="tab-list"] {
+    position: relative;
+  }
+
+  [data-slot="tab-list"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(212, 168, 83, 0.3),
+      transparent
+    );
+  }
+
+  /* Buttons — smooth gold glow */
+  button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  button:hover {
+    box-shadow: 0 0 24px rgba(212, 168, 83, 0.2);
+    transform: translateY(-1px);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+
+  /* Custom scrollbar — minimal and elegant */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(3, 3, 3, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(212, 168, 83, 0.2);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 168, 83, 0.35);
+  }
+
+  /* Text selection — gold highlight */
+  ::selection {
+    background: rgba(212, 168, 83, 0.3);
+    color: #f0e8d8;
+  }
+
+  /* Primary text — subtle gold tint */
+  .text-primary {
+    position: relative;
+  }
+
+  /* Focus states — gold ring */
+  *:focus-visible {
+    outline: 2px solid rgba(212, 168, 83, 0.5);
+    outline-offset: 2px;
+  }
+
+  /* Badge styling — pill shape */
+  .badge {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Smooth transitions for all interactive elements */
+  a, button, [role="button"], [data-slot="card"] {
+    -webkit-tap-highlight-color: transparent;
+  }

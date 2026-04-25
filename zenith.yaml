@@ -1,0 +1,238 @@
+# ═══════════════════════════════════════════════════════════════
+#  ZENITH — The Minimalist Theme
+#  "Space black meets cosmic violet"
+# ═══════════════════════════════════════════════════════════════
+
+name: zenith
+label: Zenith
+description: "Ultra-minimal space black with cosmic violet accents — breathing animations, monospace typography, and particle effects"
+
+# ── PALETTE ───────────────────────────────────────────────────
+palette:
+  background:
+    hex: '#020204'
+    alpha: 1.0
+  midground:
+    hex: '#a78bfa'
+    alpha: 1.0
+  foreground:
+    hex: '#ffffff'
+    alpha: 0
+  warmGlow: rgba(167, 139, 250, 0.1)
+  noiseOpacity: 0.15
+
+# ── TYPOGRAPHY ───────────────────────────────────────────────
+typography:
+  fontSans: '"Space Grotesk", system-ui, sans-serif'
+  fontMono: '"IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace'
+  fontDisplay: '"Space Grotesk", sans-serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap
+  baseSize: 13px
+  lineHeight: '1.55'
+  letterSpacing: 0.03em
+
+# ── LAYOUT ───────────────────────────────────────────────────
+layout:
+  radius: 2px
+  density: compact
+layoutVariant: default
+
+# ── ASSETS ───────────────────────────────────────────────────
+assets:
+  bg: 'linear-gradient(180deg, #020204 0%, #050508 50%, #020204 100%)'
+  hero: radial-gradient(ellipse 40% 25% at 50% 15%, rgba(167, 139, 250, 0.05) 0%, transparent 70%)
+  crest: ''
+
+# ── COMPONENT STYLES ────────────────────────────────────────
+componentStyles:
+  card:
+    clipPath: none
+    background: linear-gradient(180deg, rgba(8, 8, 12, 0.95) 0%, rgba(4, 4, 6, 0.98) 100%)
+    boxShadow: '0 0 0 1px rgba(167, 139, 250, 0.06)'
+    border: 1px solid rgba(167, 139, 250, 0.04)
+  header:
+    background: linear-gradient(180deg, rgba(6, 6, 10, 0.97) 0%, rgba(3, 3, 5, 0.95) 100%)
+    borderBottom: 1px solid rgba(167, 139, 250, 0.08)
+  sidebar:
+    background: linear-gradient(180deg, rgba(5, 5, 8, 0.95) 0%, rgba(3, 3, 5, 0.92) 100%)
+  tab:
+    clipPath: none
+  badge:
+    textTransform: uppercase
+    letterSpacing: 0.15em
+    fontSize: 0.6rem
+    fontWeight: 600
+    borderRadius: 1px
+  backdrop:
+    fillerOpacity: 0.9
+    fillerBlendMode: normal
+
+# ── COLOR OVERRIDES ─────────────────────────────────────────
+colorOverrides:
+  primary: '#a78bfa'
+  primaryForeground: '#020204'
+  accent: '#c4b5fd'
+  accentForeground: '#020204'
+  ring: '#a78bfa'
+  success: '#4ade80'
+  warning: '#fbbf24'
+  destructive: '#f87171'
+  border: rgba(167, 139, 250, 0.06)
+  card: rgba(6, 6, 10, 0.9)
+  cardForeground: '#e0d8f0'
+  muted: rgba(8, 8, 12, 0.65)
+  mutedForeground: '#6b5b8a'
+
+# ── CUSTOM CSS ──────────────────────────────────────────────
+customCSS: |
+  /* ═══════════════════════════════════════════════════════
+     ZENITH — Cosmic Minimalist Effects
+     ═══════════════════════════════════════════════════════ */
+
+  /* Particle field — subtle floating dots */
+  :root body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      radial-gradient(circle 1px at 20% 30%, rgba(167, 139, 250, 0.15) 0%, transparent 100%),
+      radial-gradient(circle 1px at 60% 70%, rgba(167, 139, 250, 0.1) 0%, transparent 100%),
+      radial-gradient(circle 1px at 80% 20%, rgba(167, 139, 250, 0.12) 0%, transparent 100%),
+      radial-gradient(circle 1px at 40% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 100%);
+    background-size: 200px 200px;
+    animation: zenithParticles 20s linear infinite;
+  }
+
+  @keyframes zenithParticles {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
+  }
+
+  /* Breathing glow on cards */
+  [data-slot="card"] {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-slot="card"]::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+      rgba(167, 139, 250, 0.05),
+      rgba(167, 139, 250, 0.02)
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  [data-slot="card"]:hover {
+    box-shadow: 0 0 32px rgba(167, 139, 250, 0.1);
+    transform: translateY(-1px);
+  }
+
+  [data-slot="card"]:hover::before {
+    opacity: 1;
+    animation: zenithBreathe 4s ease-in-out infinite;
+  }
+
+  @keyframes zenithBreathe {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Header — ultra-clean */
+  header {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Tab indicators — minimal line */
+  [data-slot="tab-list"] {
+    position: relative;
+  }
+
+  [data-slot="tab-list"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(167, 139, 250, 0.25),
+      transparent
+    );
+  }
+
+  /* Buttons — subtle violet glow */
+  button {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  button:hover {
+    box-shadow: 0 0 16px rgba(167, 139, 250, 0.15);
+  }
+
+  /* Custom scrollbar — almost invisible */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(167, 139, 250, 0.15);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(167, 139, 250, 0.25);
+  }
+
+  /* Text selection — violet highlight */
+  ::selection {
+    background: rgba(167, 139, 250, 0.25);
+    color: #e0d8f0;
+  }
+
+  /* Focus states — violet ring */
+  *:focus-visible {
+    outline: 1px solid rgba(167, 139, 250, 0.4);
+    outline-offset: 2px;
+  }
+
+  /* Badge styling — sharp and minimal */
+  .badge {
+    border: 1px solid rgba(167, 139, 250, 0.1);
+  }
+
+  /* Primary text — subtle violet accent */
+  .text-primary {
+    position: relative;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  a, button, [role="button"], [data-slot="card"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Subtle grid overlay */
+  :root body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(167, 139, 250, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(167, 139, 250, 0.015) 1px, transparent 1px);
+    background-size: 128px 128px;
+  }

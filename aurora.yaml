@@ -1,0 +1,257 @@
+# ═══════════════════════════════════════════════════════════════
+#  AURORA — The Command Center Theme
+#  "Where data streams meet the edge of space"
+# ═══════════════════════════════════════════════════════════════
+
+name: aurora
+label: Aurora
+description: "Deep indigo command center — electric cyan data streams, amber alerts, cockpit layout with animated grid overlay and corner brackets"
+
+# ── PALETTE ───────────────────────────────────────────────────
+palette:
+  background:
+    hex: '#050810'
+    alpha: 1.0
+  midground:
+    hex: '#3fd3ff'
+    alpha: 1.0
+  foreground:
+    hex: '#ffffff'
+    alpha: 0
+  warmGlow: rgba(63, 211, 255, 0.18)
+  noiseOpacity: 0.4
+
+# ── TYPOGRAPHY ───────────────────────────────────────────────
+typography:
+  fontSans: '"Space Grotesk", "Inter", system-ui, sans-serif'
+  fontMono: '"JetBrains Mono", "SF Mono", ui-monospace, monospace'
+  fontDisplay: '"Orbitron", "Space Grotesk", sans-serif'
+  fontUrl: https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap
+  baseSize: 14px
+  lineHeight: '1.5'
+  letterSpacing: 0.02em
+
+# ── LAYOUT ───────────────────────────────────────────────────
+layout:
+  radius: 4px
+  density: compact
+layoutVariant: cockpit
+
+# ── ASSETS ───────────────────────────────────────────────────
+assets:
+  bg: 'linear-gradient(160deg, #050810 0%, #0a1628 30%, #0d1f3c 60%, #0a1628 100%)'
+  hero: radial-gradient(ellipse 70% 40% at 50% 10%, rgba(63, 211, 255, 0.08) 0%, transparent 70%)
+  crest: ''
+
+# ── COMPONENT STYLES ────────────────────────────────────────
+componentStyles:
+  card:
+    clipPath: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)
+    background: linear-gradient(180deg, rgba(10, 22, 40, 0.92) 0%, rgba(5, 8, 16, 0.95) 100%)
+    boxShadow: '0 0 0 1px rgba(63, 211, 255, 0.15), 0 4px 24px -8px rgba(63, 211, 255, 0.2)'
+    border: 1px solid rgba(63, 211, 255, 0.1)
+  header:
+    background: linear-gradient(180deg, rgba(10, 22, 40, 0.97) 0%, rgba(5, 8, 16, 0.93) 100%)
+    borderBottom: 1px solid rgba(63, 211, 255, 0.2)
+  sidebar:
+    background: linear-gradient(180deg, rgba(8, 18, 35, 0.95) 0%, rgba(5, 8, 16, 0.9) 100%)
+  tab:
+    clipPath: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%)
+  badge:
+    textTransform: uppercase
+    letterSpacing: 0.12em
+    fontSize: 0.65rem
+    fontWeight: 700
+    borderRadius: 2px
+  backdrop:
+    fillerOpacity: 1
+    fillerBlendMode: normal
+
+# ── COLOR OVERRIDES ─────────────────────────────────────────
+colorOverrides:
+  primary: '#3fd3ff'
+  primaryForeground: '#050810'
+  accent: '#ffce3a'
+  accentForeground: '#050810'
+  ring: '#3fd3ff'
+  success: '#22c55e'
+  warning: '#ffce3a'
+  destructive: '#ef4444'
+  border: rgba(63, 211, 255, 0.12)
+  card: rgba(10, 22, 40, 0.88)
+  cardForeground: '#e0f0ff'
+  muted: rgba(10, 22, 40, 0.6)
+  mutedForeground: '#7ab8e0'
+
+# ── CUSTOM CSS ──────────────────────────────────────────────
+customCSS: |
+  /* ═══════════════════════════════════════════════════════
+     AURORA — Advanced CSS Effects
+     ═══════════════════════════════════════════════════════ */
+
+  /* Animated grid overlay — breathing tech texture */
+  :root[data-layout-variant="cockpit"] body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      linear-gradient(rgba(63, 211, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(63, 211, 255, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    animation: auroraGrid 8s ease-in-out infinite;
+  }
+
+  @keyframes auroraGrid {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+
+  /* Radial ambient glow — pulsing */
+  :root[data-layout-variant="cockpit"] body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(63, 211, 255, 0.06) 0%, transparent 70%);
+    animation: auroraGlow 6s ease-in-out infinite;
+  }
+
+  @keyframes auroraGlow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  /* Corner brackets on cards — precise and glowing */
+  :root[data-layout-variant="cockpit"] [data-slot="card"] {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :root[data-layout-variant="cockpit"] [data-slot="card"]::before,
+  :root[data-layout-variant="cockpit"] [data-slot="card"]::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Top-left bracket */
+  :root[data-layout-variant="cockpit"] [data-slot="card"]::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid rgba(63, 211, 255, 0.3);
+    border-left: 2px solid rgba(63, 211, 255, 0.3);
+  }
+
+  /* Bottom-right bracket */
+  :root[data-layout-variant="cockpit"] [data-slot="card"]::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid rgba(63, 211, 255, 0.3);
+    border-right: 2px solid rgba(63, 211, 255, 0.3);
+  }
+
+  /* Hover state — brackets glow brighter */
+  :root[data-layout-variant="cockpit"] [data-slot="card"]:hover::before,
+  :root[data-layout-variant="cockpit"] [data-slot="card"]:hover::after {
+    border-color: rgba(63, 211, 255, 0.7);
+    box-shadow: 0 0 12px rgba(63, 211, 255, 0.3);
+  }
+
+  /* Header glow effect */
+  :root[data-layout-variant="cockpit"] header {
+    box-shadow: 0 2px 30px -8px rgba(63, 211, 255, 0.15);
+  }
+
+  /* Tab indicator — glowing underline with gradient */
+  :root[data-layout-variant="cockpit"] [data-slot="tab-list"] {
+    position: relative;
+  }
+
+  :root[data-layout-variant="cockpit"] [data-slot="tab-list"]::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(63, 211, 255, 0.4) 20%,
+      rgba(63, 211, 255, 0.6) 50%,
+      rgba(63, 211, 255, 0.4) 80%,
+      transparent 100%
+    );
+    animation: auroraTabPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes auroraTabPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  /* Button hover — cyan glow */
+  :root[data-layout-variant="cockpit"] button:hover {
+    box-shadow: 0 0 20px rgba(63, 211, 255, 0.3);
+    transition: box-shadow 0.2s ease;
+  }
+
+  /* Subtle scanline effect */
+  :root[data-layout-variant="cockpit"] body {
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(63, 211, 255, 0.008) 2px,
+        rgba(63, 211, 255, 0.008) 4px
+      );
+  }
+
+  /* Custom scrollbar styling */
+  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-track {
+    background: rgba(5, 8, 16, 0.5);
+  }
+
+  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-thumb {
+    background: rgba(63, 211, 255, 0.3);
+    border-radius: 3px;
+  }
+
+  :root[data-layout-variant="cockpit"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(63, 211, 255, 0.5);
+  }
+
+  /* Data stream animation on primary elements */
+  :root[data-layout-variant="cockpit"] .text-primary {
+    position: relative;
+  }
+
+  :root[data-layout-variant="cockpit"] .text-primary::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(63, 211, 255, 0.6),
+      transparent
+    );
+    animation: auroraStream 2s linear infinite;
+  }
+
+  @keyframes auroraStream {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
